@@ -1,0 +1,1 @@
+This list was basicly a mongodb introduction.
