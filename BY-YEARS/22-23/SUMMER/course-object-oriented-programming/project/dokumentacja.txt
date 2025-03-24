@@ -1,0 +1,294 @@
+DOKUMENTACJA
+#drobny komentarz zostałem przy nazewnictwie rect ponieważ szczerze mówiąc przyzwyczajiłem się do niej
+
+main.py :
+
+    -definowanie są zmienne "gry"
+    -definowanie zmiennych odpowiadających się za poruszanie gracza
+
+    --IMAGES HANDLING--
+        -funckja odpowiadająca za skalowanie obrazów
+        -(tu umiesciłem pomimo ze to nie obrazki) muzyka w tle gry
+        -wczytywanie obrazków:
+        --przycisków
+        --serduszek reprezentujących hp
+        --"monetek"
+        --potionów
+        --broni/pocisków
+        --pól mapy
+        --postaci pojawiających się w grze
+        -funkcja draw_text() odpowiadająca za output tekstu na ekranie
+        -funkcja draw_info() odpowiadająca za wyświetlanie informacji o grze (baner u górze (hp lv score))
+
+    --WORLD--
+
+        -tutaj mamy taką małą klase która będzie pokazywała obrażenia zadane przeciwnikom
+        #class DamageText
+        --pola:
+        ---image
+        ---rect
+        ---rect.center
+        ---timer
+        --jenda metoda update()
+
+        -kolejna klasa ScreenFade pozwala na efekty przy odpalaniu gry, pauzy, śmierci (taki "fade")
+        #class ScreenFade
+        --pola:
+        ---direction
+        ---colour
+        ---speed
+        ---fade_counter
+        --jedna metoda fade()
+
+        -funkcja reset_level() odpowiadająca za resetowanie poziomu
+
+        -kilka linijek kodu odpowiadające za tworzenie pustego "worlda" i wczytywanie do niego danych
+
+    --CREATING ALL--
+        -towrzymy:
+        --gracza
+        --broń gracza
+        --tworzymy sprite grupy (przydatne od pygame)
+        --efekty fade (pózniej wykorzystywane w odpowiednich momentach)
+        --przyciski
+
+    --MAIN GAME LOOP --
+        #duży while w którym wszystko sie dzieje
+        -kontrolowanie frame ratu (sami ustalamy w pliku z constans.py)
+        -obliczanie movementu gracza
+        -poruszanie graczem
+            -- UPDATING ALL --
+            #jako aktualizacja rozumiem update "tego sie dzieje"
+            -aktualizacja worlda
+            -aktualizacaja przeciwników
+            -aktualizacja gracza
+            -aktualizacaja pocisku
+            -aktaulizacja dmg dext
+            -aktualizacaja pocisku przeciwnika
+            -aktualizcaja przedmiotów
+            
+            -- DRAWING ALL --
+            #malowanie - umieczanie na ekranie
+            -malujemy świat (https://www.youtube.com/watch?v=CANx5RcdPdo)
+            -malujemy przeciwników
+            -malujemy gracza
+        -sprawdzanie czy skończony poziom jezeli tak to odpowiednie akcje 
+        -kawałek kodu odpowiadający za odpalanie intra 
+        -jak gracz umrze to wykonujemy odpowiednie akcje
+            -- EVENT HANDLER --
+            -w skrócie sprawdzanie inputów z klawiatury
+
+items.py:
+#tutaj w pliku mamy klase Item
+#class Item
+    - __init__()
+    pola:
+        --item_type
+        --animation_list
+        --frame_index
+        --update_time
+        --image
+        --rect
+        --rect.center
+        --dummy_coin
+    - update()
+        --sprawdza czy gracz zebrał przedmiot i adekwatnie reaguje
+        --aktualizuje animacje (to tak naprawde tylko do "monetki" się odnosi ponieważ potki są "statyczne")
+    - draw()
+        --malujemy na ekranie
+
+button.py
+#tutaj w pliku mamy drobną klase która odpowiada za nasze przyciski
+#class Button
+    - __init__()
+    pola:
+        --image
+        --rect
+        --rect.topleft
+    - draw()
+        -"zczytujemy" pozycje myszki i jak myszka najedzie i kliknie na przycisk to zwraca nam ze to sie wydarzyło
+        - oczywiście również maluemy przycisk na ekranie
+
+world.py
+#w tym pliku mamy klase która odpowiada za cały nasz świat przedstawiony
+#class World
+
+    -__init__()
+    pola:
+        --map_tiles
+        --obstacle_tiles
+        --exit_tile
+        --ent_tile
+        --item_list
+        --player
+        --character_list
+    - process_data() 
+        -funckja która tak naprawde przetwarza dane jak sama nazwa wskazuje
+        sprawdza jakie pole w pliku napotyka (chodzi o poziomy) i odpowiednio przetwarza oraz na koncu dodaje pole do map_tiles
+
+    -update()
+
+    -draw()
+        -malujemy na ekranie pola
+
+weapons.py
+#w tym pliku jest kilka klas, wszystkie związane z brońmi jak nazwa pliku sugeruje
+
+#class Weapon
+#jak sama nazwa wskauje jest to broń, w grze broń jest jedna jest to kunai "przyklejony" do gracza
+
+    - __inti__()
+    pola:
+        --original_image
+        --angle
+        --image
+        --bullet_image 
+        --rect 
+        --fired 
+        --last_shot
+     - update()
+        -zbieramy input z myszki (kliknięcia) i strzelamy
+    - draw()
+        -malujemy naszą broń
+
+#class Bullet
+#nadklasa dla pocisków
+
+    - __init__()
+    pola:
+        --rect 
+        --rect.center
+        --dx #prędkosc pocisku
+        --dy # -..-
+    - draw()
+        -malowanie pocisku
+
+#class Player_bullet
+#dziedziczy po klasie Bullet
+
+    - __init__()
+    pola:
+        --angle
+        --original_image 
+        --image 
+        --speed
+        #tutaj super() -wywołojemy konstruktor nadklasy
+        super().__init__()
+    - update()
+        -przemieszczanie pocisku
+        -sprawdzanie kolizji
+        -sprawdzanie czy pocisk wyleciał za ekran (zeby nie zapychac pamieci)
+        -kolizja miedzy pociskiem a przeciwnikami
+
+#class Enemy_Bullet
+#klasa dziedziczy po Bullet, tak naprawde odpowiada za pociski bossa (u nas huge_demon)
+
+    - __init__()
+    pola:
+        --angle
+        --original_image 
+        --image 
+        --speed 
+        #tutaj super() -wywołojemy konstruktor nadklasy
+        super().__init__()
+    - update()
+        -przemieszczanie pocisku
+        -sprawdzanie czy pocisk wyleciał za ekran (zeby nie zapychac pamieci)
+        -sprawdzanie kolizji między pociskiem a graczem
+
+character.py
+#w tym pliku mamy jedna klase Character która zajmuje się wszystkimi postaciami oraz rzeczami z nimi powiązanymi
+#class Character()
+
+    - __init__()
+    pola:
+        --character_type 
+        --boss 
+        --score 
+        --flip 
+        --animation_list 
+        --frame_index 
+        --action  
+        --update_time 
+        --running 
+        --health 
+        --alive 
+        --hit 
+        --last_hit
+        --last_attack 
+        --stunned 
+        --speed 
+        --dmg 
+        --player_seen 
+        --last_time_player_seen 
+        --last_seen_player_pos_x 
+        --last_seen_player_pos_y 
+        --image 
+        --rect 
+        --rect.center 
+    - move()
+        -poruszanie postaci
+        -sprawdzanie kolizji z scianami
+        -sprawdzamy czy napotkalismy koniec poziomu/gry
+        -atualizujemy "scrolla" chodzi tu o "kamerę" tak naprawde
+    - ai()
+        -przemieszczanie przeciwników
+        -ai , w przypadku tej gry to poprostu tworzymy linie między graczem a przeciwnikiem
+        i jezeli nie napotyka zadnej sciany to przeciwnik biegnie w kierunku gracza (również kilka chwil po zobaczeniu gracza)
+        -atakowanie gracza za odpowiednie wartości w zaleznosci jaki to przeciwnik
+        -pociski bossa (stzrelanie nimi)
+    - update()
+        -sprawdzamy czy postać umarła
+        -aktualzujemy informacje na temat gracza (jak został uderzony to czy mineła chwila rzeby mozna go było znowu uderzyc, oraz co postać robi porusza się/stoi w miejscu)
+        -aktualizujemy animacje 
+    - update_action()
+        -aktualizujemy akcje (stanie / bieganie)
+    - draw()
+        -malowanie postaci
+
+constans.py
+#plik w którym zawarte są stałe pojawiające sie w plikach
+    FPS
+    SCREEN_WIDTH 
+    SCREEN_HIGHT
+
+    SCALE #for images
+    WEAPON_SCALE 
+    BULLET_SCALE 
+    ITEM_SCALE 
+    POTION_SCALE 
+    BUTTON_SCALE 
+
+    PLAYER_HEALTH 
+    SPEED 
+    BULLET_SPEED 
+    PLAYER_DMG 
+
+    OFFSET  
+    ENEMY_SPEED 
+    ATTACK_RANGE
+    RANGE 
+    ENEMY_BULLET_SCALE 
+    ENEMY_BULLET_SPEED 
+
+    BLACK = (0, 0, 0)
+    LIGHT_PINK = (255, 102, 178)
+    WHITE = (255, 255, 255)
+    SALMON_COLORED = (242, 155, 136)
+    DMG_COLOR = (255, 145, 230)
+    BANNER_COLOR = (42, 42, 42)
+    BACKGROUND_COLOR = (119, 207, 242)
+    MENU_BG = (242, 178, 121)
+    PAUSE_BG = (140, 72, 48)
+
+
+    TILE_SIZE 
+    TILE_TYPES 
+    ROWS 
+    COLS 
+    SCROOL_TRESH
+
+#w folderze assets znajdują się 3 foldery:
+    -audio -- (tutaj jest plik z muzyką zrobioną w grze, dobry kolega dla mnie zrobił)
+    -fonts -- tam znajduje się poprostu font tekstu
+    -images -- w tym folderze znajudje się cała grafika urzyta w grze (wszelkie klatki animacji oraz przerózne pola)
