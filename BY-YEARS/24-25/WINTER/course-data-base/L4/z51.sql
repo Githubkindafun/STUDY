@@ -1,0 +1,14 @@
+
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED; --deadlock
+--SET TRANSACTION ISOLATION LEVEL READ COMMITTED; --deadlock
+--SET TRANSACTION ISOLATION LEVEL REPEATABLE READ; --deadlock
+--SET TRANSACTION ISOLATION LEVEL SERIALIZABLE; --deadlock
+BEGIN TRANSACTION;
+
+INSERT into liczby1 VALUES (1); -- this couses the problem becouse all isolation leves use exclusive locks for data integrity
+
+WAITFOR DELAY '00:00:07'
+
+UPDATE liczby2 set liczba = 10;
+
+COMMIT;
