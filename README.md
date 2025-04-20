@@ -45,7 +45,7 @@ This is a collection of my solutions from my time at uni.
   * Ochrona własności intelektualnej
   * [Kurs: projektowanie aplikacji z bazami danych](./BY-YEARS/24-25/WINTER/course-data-base)
   * [Kurs: programowanie gier w Unity](./BY-YEARS/24-25/WINTER/course-Unity/MINIGOLFCOURSE)
-  * [Inżynieria oprogramowania](./BY-YEARS/24-25/WINTER/software engineering)
+  * [Inżynieria oprogramowania](./BY-YEARS/24-25/WINTER/software-engineering)
 
   **Lato**
   * Algorytmy i struktury danych
