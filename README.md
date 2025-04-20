@@ -1,5 +1,7 @@
 <h1>BY-YEARS</h1>
 
+This is a collection of my solutions from my time at uni.
+
 <details>
   <summary><h2>2022/2023</h2></summary>
 
@@ -55,6 +57,8 @@
 </details>
 
 <h1>Projects</h1>
+
+Here are the larger projects carried out in the various classes.
 
 <details>
   <summary><h2>Computer Graphics</h2></summary>
