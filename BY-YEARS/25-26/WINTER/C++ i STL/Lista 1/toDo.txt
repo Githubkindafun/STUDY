@@ -1,0 +1,8 @@
+[X] zad1
+[X] zad2
+[] zad3
+[X] zad4
+[X] zad5
+[X] zad6
+[] zad7
+[] zad8
