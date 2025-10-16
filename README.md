@@ -61,7 +61,7 @@ This is a collection of my solutions from my time at uni.
 
   **Zima**
   * Systemy wbudowane
-  * [Kurs: zaawansowany C++ i STL](./BY-YEARS/25-26/WINTER/C++ i STL) 
+  * Kurs: zaawansowany C++ i STL
   * Ai<3:procedural content generation
   * Seminaruim Wizualizacja Danych
   * Kurs: Cuda
