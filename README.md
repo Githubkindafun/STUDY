@@ -56,6 +56,18 @@ This is a collection of my solutions from my time at uni.
 
 </details>
 
+<details>
+  <summary><h2>2025/2026</h2></summary>
+
+  **Zima**
+  * Systemy wbudowane
+  * [Kurs: zaawansowany C++ i STL](./BY-YEARS/25-26/WINTER/C++ i STL) 
+  * Ai<3:procedural content generation
+  * Seminaruim Wizualizacja Danych
+  * Kurs: Cuda
+
+</details>
+
 <h1>Projects</h1>
 
 Here are the larger projects carried out in the various classes.
