@@ -66,6 +66,11 @@ This is a collection of my solutions from my time at uni.
   * Seminaruim Wizualizacja Danych
   * Kurs: Cuda
 
+  **Lato**
+  * Realistyczna Grafika Komputerowa
+  * Kurs: Blender
+  * Praca Inżynierska
+
 </details>
 
 <h1>Projects</h1>
