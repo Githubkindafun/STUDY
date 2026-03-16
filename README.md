@@ -62,8 +62,8 @@ This is a collection of my solutions from my time at uni.
 
   **Winter**
   * [Embedded systems](./BY-YEARS/25-26/WINTER/Embeded-Systems)
-  * Advanced techniques in C++ and STL
-  * Artificial Intelligence <3 Games: Procedural Content Generation
+  * [Advanced techniques in C++ and STL](./BY-YEARS/25-26/WINTER/C++-and-STL)
+  * [Artificial Intelligence <3 Games: Procedural Content Generation](./BY-YEARS/25-26/WINTER/Ai-3-PCG)
   * Proseminar: Data Visualisation
   * Parallel Computing with CUDA
   * Financial Services
