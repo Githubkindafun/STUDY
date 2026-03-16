@@ -5,17 +5,17 @@ This is a collection of my solutions from my time at uni.
 <details>
   <summary><h2>2022/2023</h2></summary>
 
-  **Zima**
-  * Logika dla informatyków
-  * Wstęp do informatyki
-  * Kurs: Wstęp do programowania w Python
-  * Analiza Matematyczna
-  * Kurs: Podstawowy warsztat informatyka
+  **Winter**
+  * Logic for Computer Science
+  * Introduction to computer science
+  * Introduction to Programming in Python
+  * Calculus
+  * Computing for Computer Scientists
 
-  **Lato**
-  * [Programowanie Obiektowe](./BY-YEARS/22-23/SUMMER/course-object-oriented-programming/project)
-  * Metody Programowania
-  * [Kurs: C++](./BY-YEARS/22-23/SUMMER/course-C++) 
+  **Summer**
+  * [Object-oriented programming](./BY-YEARS/22-23/SUMMER/course-object-oriented-programming/project)
+  * Programming methodology
+  * [C++ course](./BY-YEARS/22-23/SUMMER/course-C++) 
   * Algebra
 
 </details>
@@ -23,53 +23,56 @@ This is a collection of my solutions from my time at uni.
 <details>
   <summary><h2>2023/2024</h2></summary>
 
-  **Zima**
-  * Matematyka Dyskretna
-  * [Kurs: rozszerzony Python](./BY-YEARS/23-24/WINTER/course-python) 
-  * Analiza numeryczna
+  **Winter**
+  * Discrete Mathematics 
+  * [Advanced Python Programming](./BY-YEARS/23-24/WINTER/course-python) 
+  * Numerical Analysis
 
-  **Lato**
-  * Systemy Komputerowe
-  * Rachunek Prawdopodobieństwa i statystyka
-  * [Algorytmy i Struktury Danych](./BY-YEARS/23-24/SUMMER/AISD/algorithm-tasks)
+  **Summer**
+  * Computer Systems
+  * Probability and Statistics
+  * [Algorithms and Data Structures ](./BY-YEARS/23-24/SUMMER/AISD/algorithm-tasks)
+  * Ethics for the thinking
+  * From Mordor to Matrix. The Fantastic Political Philosophy
 
 </details>
 
 <details>
   <summary><h2>2024/2025</h2></summary>
 
-  **Zima**
-  * [Wybrane elementy praktyki projektowania oprogramowania](./BY-YEARS/24-25/WINTER/course-js-ts)
-  * Programowanie współbieżne
-  * [Podstawy grafiki komputerowej](./BY-YEARS/24-25/WINTER/computer-graphics)
-  * Ochrona własności intelektualnej
-  * [Kurs: projektowanie aplikacji z bazami danych](./BY-YEARS/24-25/WINTER/course-data-base)
-  * [Kurs: programowanie gier w Unity](./BY-YEARS/24-25/WINTER/course-Unity/MINIGOLFCOURSE)
-  * [Inżynieria oprogramowania](./BY-YEARS/24-25/WINTER/software-engineering)
+  **Winter**
+  * [Selected Areas of Practical Software Development](./BY-YEARS/24-25/WINTER/course-js-ts)
+  * Concurrent programming
+  * [Fundamentals of Computer Graphics](./BY-YEARS/24-25/WINTER/computer-graphics)
+  * Intellectual Property Rights
+  * [Design of database applications](./BY-YEARS/24-25/WINTER/course-data-base)
+  * [Course: Game Development in Unity3D](./BY-YEARS/24-25/WINTER/course-Unity/MINIGOLFCOURSE)
+  * [Software engineering ](./BY-YEARS/24-25/WINTER/software-engineering)
 
-  **Lato**
-  * Algorytmy i struktury danych
-  * Kurs: Frontend
-  * Projektorwanie obiektowego oprogramowania
-  * [Sztuczna Inteligencja](./BY-YEARS/24-25/SUMMER/ai/L1)
-  * Sieci komputerowe
+  **Summer**
+  * Front-end apps developmentv
+  * Object-oriented Software Development
+  * [Artificial Intelligenc](./BY-YEARS/24-25/SUMMER/ai/L1)
+  * Computer networks
 
 </details>
 
 <details>
   <summary><h2>2025/2026</h2></summary>
 
-  **Zima**
-  * Systemy wbudowane
-  * Kurs: zaawansowany C++ i STL
-  * Ai<3:procedural content generation
-  * Seminaruim Wizualizacja Danych
-  * Kurs: Cuda
+  **Winter**
+  * [Embedded systems](./BY-YEARS/25-26/WINTER/Embeded-Systems)
+  * Advanced techniques in C++ and STL
+  * Artificial Intelligence <3 Games: Procedural Content Generation
+  * Proseminar: Data Visualisation
+  * Parallel Computing with CUDA
+  * Financial Services
+  * Project: : Game Botting
 
-  **Lato**
-  * Realistyczna Grafika Komputerowa
-  * Kurs: Blender
-  * Praca Inżynierska
+  **Summer**
+  * Realistic Computer Graphics
+  * Course: Blender
+  * BS thesis
 
 </details>
 
