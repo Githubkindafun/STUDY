@@ -1,0 +1,2 @@
+# Ai<3: PCG
+Classes during which I learned various techniques for procedural content generation. Among other things, I created various map generators for games such as Super Mario Bros, The Original Zelda, and a dungeon generator not explicite related to any game (i.e. Binary Partitioning). At the end of the course, my colleague and I wrote a short article along with a Godot script and various methods for generating terrain (more specifically, mountains) based on various noise-based methods.

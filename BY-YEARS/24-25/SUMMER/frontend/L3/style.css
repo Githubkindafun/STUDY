@@ -1,0 +1,115 @@
+html {
+    font-size: clamp(1rem, 2vw + 1rem, 1.5rem);
+    /* min 1 rem max 1.5rem dynamicly grows based on 2vw + 1 rem */
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald';
+    background-color: navy;
+    display: flex; /* flex for centering content */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* vh - view port hight ,basicly gurantee that body takes 100% of window height */
+}
+  
+
+.card {
+    background-color: rgb(245, 235, 183);
+    padding: 1.25rem;
+    margin: 1rem;
+    border-radius: 10%;
+    max-width: 600px;
+    width: 100%;
+    min-width: 300px; /* prevents card becoming to small */
+}
+  
+
+.form {
+    display: grid;
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* automaticly creates collumns depending on a free space */
+}
+  
+.form__header {
+    grid-column: 1 / -1; /* all of the given space (full width) */
+    font-size: 2rem;
+    font-weight: bold;
+}
+  
+
+.form__items { /* here we set elements in a collumn for evey item so label appears above the input field */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form__items--full {   /* BEM notation means taht given blockshould take all given space */
+    grid-column: 1 / -1; /* we want that text field taking the whole available space */
+}
+  
+
+.form__input,
+.form__select,
+.form__textarea {
+    padding: 0.5rem;
+    border: 2px solid #666262;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    font-size: 0.75rem;
+}
+  
+.form__input:hover,
+.form__select:hover,
+.form__textarea:hover {
+    background-color: #c2bfbf;
+}
+
+.form__input:invalid,
+.form__select:invalid,
+.form__textarea:invalid {
+    border-color: red;  
+}
+
+.form__checkbox-wrapper { /* wihout it there will be no alligment to the checkerbox as i wanted */
+    display: flex;
+    align-items: center;
+}
+
+.form__checkbox {
+    width: 1rem;
+    height: 1rem;
+}
+
+.form__submit {
+    grid-column: 1 / -1;
+    padding: 0.42rem;
+    font-size: 1.65rem;
+    font-weight: bold;
+    background-color: #0051ff;
+    color: rgb(235, 235, 235);
+    border: 8px transparent navy;
+    border-radius: 4px;
+    cursor: pointer; /* clickable */
+}
+
+.form__submit:hover {
+    background-color: #2f70fc;
+    color:  rgb(159, 159, 168);
+}
+  
+
+@media (pointer: coarse) { /* checks if we are using something like a phone, if yes then scales the cheker box to make it easeier to click */
+    .form__checkbox {
+        transform: scale(2);
+        margin-right: 1rem;
+    }
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+  

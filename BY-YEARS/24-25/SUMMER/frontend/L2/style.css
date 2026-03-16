@@ -1,0 +1,115 @@
+/*
+W szczególności, własności użyte w rozwiązaniu wzorcowym to: 
+background-color, border, border-color, border-radius, border-top, 
+border-top-color, box-sizing, color, content, display, font-family, 
+font-size, font-weight, list-style, margin, max-width, min-width, text-align, 
+text-decoration, width
+*/
+
+
+
+body {
+    background-color: lightblue;
+    color: darkblue;
+
+    font-family: "Oswald", sans-serif;  
+
+    font-size: 1rem;
+}
+
+body h1 {
+    font-weight: 800;
+    text-align: center;
+}
+
+body p {
+    margin: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+    
+ 
+
+
+#challenge2 #boxes .box:nth-child(1) {
+    background-color: lightgreen;
+    border-radius: 50%;
+}
+
+#challenge2 #boxes .box:nth-child(1):hover {
+    background-color: lightpink;
+}
+
+#challenge2 #boxes .box:nth-child(2) {
+    background-color: lightslategray;
+    border: 10px solid;
+    border-color: black;
+    box-sizing: border-box;
+}
+
+#challenge2 #boxes .box:nth-child(2):hover {
+    background-color: black;
+    border: 10px solid;
+    border-color: lightslategray;
+    box-sizing: border-box;
+}
+
+#challenge2 #boxes .box:nth-child(3) {
+    background: linear-gradient(to bottom, white 50%, red 50%);
+}
+
+#challenge2 #boxes .box:nth-child(3):hover {
+    background: linear-gradient(to top, white 50%, red 50%);
+}
+
+/* i guess these does not hard code px */
+
+#challenge3 .food-link {
+    color: darkblue;
+    text-decoration: underline;
+} 
+/* food-link class*/
+#challenge3 .food-link:visited {
+    color: lightslategray;
+} 
+
+#challenge3 .food-link:hover {
+    color: red;
+    font-weight: bold;
+} 
+
+/* ok i found the hexcode for the burger i hope it works*/
+#challenge3 ul {
+    list-style-type: "\1f354";
+}
+
+
+#challenge4 p:empty{
+    display: none;
+}
+
+#challenge4 input:disabled{
+    display: none;
+}
+/*
+#challenge4 p {
+    margin: 2rem 1rem; 
+}
+    */
+/* idk maybe i am crazy but is that neccessary? */
+
+#challenge4 a[href*="recipe"] {
+    display: none;
+}
+
+#challenge5 #ariel img{
+    width: 70%;
+    min-width: 100px;
+    max-width: 500px;
+    height: auto;
+}
+  
+#challenge5 #ariel figcaption {
+    font-size: 0.7rem;
+}
